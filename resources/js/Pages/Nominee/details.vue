@@ -2,14 +2,20 @@
     <app-layout>
         <template #header>
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                Dashboard
+                Nominee
             </h2>
         </template>
 
         <div class="py-12">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                    Hello
+                    <ul>
+                        <li>name: {{ nominee.name }}</li>
+                        <li>class: {{ nominee.class }}</li>
+                        <li>age: {{ nominee.age }}</li>
+                        <li>hobby: {{ nominee.hobby }}</li>
+                        <li>description: {{ nominee.description }}</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -20,6 +26,10 @@
     import AppLayout from '@/Layouts/AppLayout'
 
     export default {
+        props: {
+            nominee: Object,
+        },
+
         components: {
             AppLayout,
         },
