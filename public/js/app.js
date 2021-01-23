@@ -4186,10 +4186,31 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      user_form: {
+        name: null,
+        "class": null,
+        age: null,
+        hobby: null,
+        description: null
+      }
+    };
+  },
   components: {
     AppLayout: _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__.default
+  },
+  methods: {
+    submit: function submit() {
+      this.$inertia.post('/nominees', this.user_form);
+    }
   }
 });
 
@@ -4207,6 +4228,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/Layouts/AppLayout */ "./resources/js/Layouts/AppLayout.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -4255,6 +4287,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/Layouts/AppLayout */ "./resources/js/Layouts/AppLayout.vue");
+//
+//
+//
+//
+//
 //
 //
 //
@@ -32534,35 +32571,144 @@ var render = function() {
       _c("div", { staticClass: "py-12" }, [
         _c("div", { staticClass: "max-w-7xl mx-auto sm:px-6 lg:px-8" }, [
           _c(
-            "div",
-            { staticClass: "bg-white overflow-hidden shadow-xl sm:rounded-lg" },
+            "form",
+            {
+              staticClass:
+                "bg-white overflow-hidden shadow-xl sm:rounded-lg flex flex-col",
+              on: {
+                submit: function($event) {
+                  $event.preventDefault()
+                  return _vm.submit($event)
+                }
+              }
+            },
             [
-              _c("ul", [
-                _c("li", [
-                  _vm._v("name: "),
-                  _c("input", { attrs: { type: "text", name: "name" } })
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _vm._v("class: "),
-                  _c("input", { attrs: { type: "text", name: "class" } })
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _vm._v("age: "),
-                  _c("input", { attrs: { type: "text", name: "age" } })
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _vm._v("hobby: "),
-                  _c("input", { attrs: { type: "text", name: "hobby" } })
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _vm._v("description: "),
-                  _c("input", { attrs: { type: "text", name: "description" } })
-                ])
-              ])
+              _c("label", { attrs: { for: "name" } }, [_vm._v("Name: ")]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.user_form.name,
+                    expression: "user_form.name"
+                  }
+                ],
+                attrs: { type: "text", name: "name" },
+                domProps: { value: _vm.user_form.name },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.user_form, "name", $event.target.value)
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _c("label", { attrs: { for: "class" } }, [_vm._v("Class: ")]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.user_form.class,
+                    expression: "user_form.class"
+                  }
+                ],
+                attrs: { type: "text", name: "class" },
+                domProps: { value: _vm.user_form.class },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.user_form, "class", $event.target.value)
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _c("label", { attrs: { for: "age" } }, [_vm._v("Age: ")]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.user_form.age,
+                    expression: "user_form.age"
+                  }
+                ],
+                attrs: { type: "text", name: "age" },
+                domProps: { value: _vm.user_form.age },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.user_form, "age", $event.target.value)
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _c("label", { attrs: { for: "hobby" } }, [_vm._v("Hobby: ")]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.user_form.hobby,
+                    expression: "user_form.hobby"
+                  }
+                ],
+                attrs: { type: "text", name: "hobby" },
+                domProps: { value: _vm.user_form.hobby },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.user_form, "hobby", $event.target.value)
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _c("label", { attrs: { for: "description" } }, [
+                _vm._v("Description: ")
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.user_form.description,
+                    expression: "user_form.description"
+                  }
+                ],
+                attrs: { type: "text", name: "description" },
+                domProps: { value: _vm.user_form.description },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.user_form, "description", $event.target.value)
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _c(
+                "button",
+                {
+                  staticClass:
+                    "my-6 bg-indigo-600 px-4 py-1 text-white rounded-lg text-sm hover:bg-indigo-500 focus:bg-indigo-700",
+                  attrs: { type: "submit" }
+                },
+                [_vm._v("Submit")]
+              )
             ]
           )
         ])
@@ -32623,18 +32769,169 @@ var render = function() {
             "div",
             { staticClass: "bg-white overflow-hidden shadow-xl sm:rounded-lg" },
             [
-              _c("ul", [
-                _c("li", [_vm._v("name: " + _vm._s(_vm.nominee.name))]),
+              _c("ul", { staticClass: "flex flex-col" }, [
+                _c("label", { attrs: { for: "name" } }, [_vm._v("Name: ")]),
                 _vm._v(" "),
-                _c("li", [_vm._v("class: " + _vm._s(_vm.nominee.class))]),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.nominee.name,
+                      expression: "nominee.name"
+                    }
+                  ],
+                  attrs: { type: "text", name: "name" },
+                  domProps: { value: _vm.nominee.name },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(_vm.nominee, "name", $event.target.value)
+                    }
+                  }
+                }),
                 _vm._v(" "),
-                _c("li", [_vm._v("age: " + _vm._s(_vm.nominee.age))]),
+                _c("label", { attrs: { for: "class" } }, [_vm._v("Class: ")]),
                 _vm._v(" "),
-                _c("li", [_vm._v("hobby: " + _vm._s(_vm.nominee.hobby))]),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.nominee.class,
+                      expression: "nominee.class"
+                    }
+                  ],
+                  attrs: { type: "text", name: "class" },
+                  domProps: { value: _vm.nominee.class },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(_vm.nominee, "class", $event.target.value)
+                    }
+                  }
+                }),
                 _vm._v(" "),
-                _c("li", [
-                  _vm._v("description: " + _vm._s(_vm.nominee.description))
-                ])
+                _c("label", { attrs: { for: "age" } }, [_vm._v("Age: ")]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.nominee.age,
+                      expression: "nominee.age"
+                    }
+                  ],
+                  attrs: { type: "text", name: "age" },
+                  domProps: { value: _vm.nominee.age },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(_vm.nominee, "age", $event.target.value)
+                    }
+                  }
+                }),
+                _vm._v(" "),
+                _c("label", { attrs: { for: "hobby" } }, [_vm._v("Hobby: ")]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.nominee.hobby,
+                      expression: "nominee.hobby"
+                    }
+                  ],
+                  attrs: { type: "text", name: "hobby" },
+                  domProps: { value: _vm.nominee.hobby },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(_vm.nominee, "hobby", $event.target.value)
+                    }
+                  }
+                }),
+                _vm._v(" "),
+                _c("label", { attrs: { for: "description" } }, [
+                  _vm._v("Description: ")
+                ]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.nominee.description,
+                      expression: "nominee.description"
+                    }
+                  ],
+                  attrs: { type: "text", name: "description" },
+                  domProps: { value: _vm.nominee.description },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(_vm.nominee, "description", $event.target.value)
+                    }
+                  }
+                }),
+                _vm._v(" "),
+                _c(
+                  "li",
+                  [
+                    _c(
+                      "a",
+                      {
+                        staticClass:
+                          "text-lg text-blue-500 hover:text-blue-400",
+                        attrs: { href: _vm.route("nominees.home") }
+                      },
+                      [_vm._v("Back")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "inertia-link",
+                      {
+                        staticClass:
+                          "text-lg text-green-500 hover:text-green-400",
+                        attrs: {
+                          href: _vm.route("nominees.update", _vm.nominee.id),
+                          method: "put",
+                          data: _vm.nominee,
+                          as: "button",
+                          type: "button"
+                        }
+                      },
+                      [_vm._v("Update")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "inertia-link",
+                      {
+                        staticClass: "text-lg text-red-500 hover:text-red-400",
+                        attrs: {
+                          href: _vm.route("nominees.delete", _vm.nominee.id),
+                          method: "delete",
+                          as: "button",
+                          type: "button"
+                        }
+                      },
+                      [_vm._v("Delete")]
+                    )
+                  ],
+                  1
+                )
               ])
             ]
           )
@@ -32674,14 +32971,26 @@ var render = function() {
           key: "header",
           fn: function() {
             return [
-              _c(
-                "h2",
-                {
-                  staticClass:
-                    "font-semibold text-xl text-gray-800 leading-tight"
-                },
-                [_vm._v("\n            Nominee\n        ")]
-              )
+              _c("div", { staticClass: "flex" }, [
+                _c(
+                  "h2",
+                  {
+                    staticClass:
+                      "font-semibold text-xl text-gray-800 leading-tight"
+                  },
+                  [_vm._v("\n                Nominee\n            ")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  {
+                    staticClass:
+                      "ml-auto my-auto bg-indigo-600 px-4 py-1 text-white rounded-lg text-sm hover:bg-indigo-500 focus:bg-indigo-700",
+                    attrs: { href: _vm.route("nominees.create") }
+                  },
+                  [_vm._v("Add Nominee")]
+                )
+              ])
             ]
           },
           proxy: true
@@ -32700,32 +33009,50 @@ var render = function() {
             },
             _vm._l(_vm.nominees, function(nominee) {
               return _c("div", { key: nominee.id, staticClass: "w-1/2 p-4" }, [
-                _c("div", { staticClass: "flex bg-white my-4" }, [
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "w-1/3 rounded-lg text-center m-10 bg-gray-600"
-                    },
-                    [_vm._v("Photo")]
-                  ),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "w-2/3 py-10 pl-2 text-sm" }, [
-                    _c("ul", [
-                      _c("li", [_vm._v("Name: " + _vm._s(nominee.name))]),
-                      _vm._v(" "),
-                      _c("li", [_vm._v("Age: " + _vm._s(nominee.age))]),
-                      _vm._v(" "),
-                      _c("li", [_vm._v("Class: " + _vm._s(nominee.class))]),
-                      _vm._v(" "),
-                      _c("li", [_vm._v("Hobby: " + _vm._s(nominee.hobby))]),
-                      _vm._v(" "),
-                      _c("li", [
-                        _vm._v("Description: " + _vm._s(nominee.description))
+                _c(
+                  "div",
+                  { staticClass: "flex bg-white my-4 rounded-lg h-full" },
+                  [
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "w-1/3 rounded-lg text-center m-10 bg-gray-600"
+                      },
+                      [_vm._v("Photo")]
+                    ),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "w-2/3 py-10 pl-2 text-sm" }, [
+                      _c("ul", [
+                        _c("li", [_vm._v("Name: " + _vm._s(nominee.name))]),
+                        _vm._v(" "),
+                        _c("li", [_vm._v("Age: " + _vm._s(nominee.age))]),
+                        _vm._v(" "),
+                        _c("li", [_vm._v("Class: " + _vm._s(nominee.class))]),
+                        _vm._v(" "),
+                        _c("li", [_vm._v("Hobby: " + _vm._s(nominee.hobby))]),
+                        _vm._v(" "),
+                        _c("li", [
+                          _vm._v("Description: " + _vm._s(nominee.description))
+                        ]),
+                        _vm._v(" "),
+                        _c("li", [
+                          _c(
+                            "a",
+                            {
+                              staticClass:
+                                "text-blue-400 hover:text-indigo-400",
+                              attrs: {
+                                href: _vm.route("nominees.show", nominee.id)
+                              }
+                            },
+                            [_vm._v("more details")]
+                          )
+                        ])
                       ])
                     ])
-                  ])
-                ])
+                  ]
+                )
               ])
             }),
             0

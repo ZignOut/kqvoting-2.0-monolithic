@@ -57,7 +57,7 @@ class NomineeController extends Controller
         $nominee->description = request('description');
         $nominee->save();
 
-        return redirect($nominee->path());
+        return redirect()->route('nominees.show', $nominee->id);
     }
 
     /**
@@ -75,7 +75,7 @@ class NomineeController extends Controller
         $nominee->description = request('description');
         $nominee->save();
 
-        return redirect($nominee->path());
+        return redirect()->route('nominees.show', $nominee->id);
     }
 
     /**

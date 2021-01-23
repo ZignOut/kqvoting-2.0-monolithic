@@ -51,10 +51,19 @@ class ManageNomineeTest extends TestCase
         $this->assertDatabaseMissing('nominees', $updated_nominee);
 
         // assert that guest cannot delete nominee
-        $this->delete($test_nominees[0]->path())
-            ->assertStatus(302);
+        $test_nominee = [
+            'name' => 'HHA',
+            'class' => '1CST-A',
+            'age' => 17,
+            'hobby' => 'reading',
+            'description' => 'Elit sint eiusmod esse ea nostrud laboris nostrud ut ea in sint occaecat consequat aliquip. In aute eu nostrud tempor anim do elit Lorem. Tempor dolor ex qui amet do fugiat dolore ipsum Lorem duis adipisicing sint consequat sint. Et cillum consequat incididunt fugiat Lorem est voluptate.'
+        ];
+        $deleted_nominee = Nominee::factory()->create($test_nominee);
         
-        $this->assertDatabaseHas('nominees', $test_nominees[0]->toArray());
+        $this->delete($deleted_nominee->path())
+            ->assertStatus(302);
+            
+        $this->assertDatabaseHas('nominees', $test_nominee);
     }
 
     /** @test */
