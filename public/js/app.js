@@ -4191,6 +4191,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -4209,7 +4219,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     submit: function submit() {
-      this.$inertia.post('/nominees', this.user_form);
+      this.$inertia.post("/nominees", this.user_form);
     }
   }
 });
@@ -4228,6 +4238,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/Layouts/AppLayout */ "./resources/js/Layouts/AppLayout.vue");
+//
+//
+//
+//
+//
 //
 //
 //
@@ -4309,6 +4324,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/Layouts/AppLayout */ "./resources/js/Layouts/AppLayout.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -32580,7 +32607,7 @@ var render = function() {
                   staticClass:
                     "font-semibold text-xl text-gray-800 leading-tight"
                 },
-                [_vm._v("\n            Nominee\n        ")]
+                [_vm._v("Nominee")]
               )
             ]
           },
@@ -32729,7 +32756,7 @@ var render = function() {
                     "my-6 bg-indigo-600 px-4 py-1 text-white rounded-lg text-sm hover:bg-indigo-500 focus:bg-indigo-700",
                   attrs: { type: "submit" }
                 },
-                [_vm._v("Submit")]
+                [_vm._v("\n          Submit\n        ")]
               )
             ]
           )
@@ -32775,7 +32802,7 @@ var render = function() {
                   staticClass:
                     "font-semibold text-xl text-gray-800 leading-tight"
                 },
-                [_vm._v("\n            Nominee\n        ")]
+                [_vm._v("Nominee")]
               )
             ]
           },
@@ -32935,11 +32962,7 @@ var render = function() {
                           type: "button"
                         }
                       },
-                      [
-                        _vm._v(
-                          "\n                            Update\n                        "
-                        )
-                      ]
+                      [_vm._v("\n              Update\n            ")]
                     ),
                     _vm._v(" "),
                     _c(
@@ -32953,11 +32976,7 @@ var render = function() {
                           type: "button"
                         }
                       },
-                      [
-                        _vm._v(
-                          "\n                            Delete\n                        "
-                        )
-                      ]
+                      [_vm._v("\n              Delete\n            ")]
                     )
                   ],
                   1
@@ -33008,7 +33027,7 @@ var render = function() {
                     staticClass:
                       "font-semibold text-xl text-gray-800 leading-tight"
                   },
-                  [_vm._v("\n                Nominee\n            ")]
+                  [_vm._v("\n        Nominee\n      ")]
                 ),
                 _vm._v(" "),
                 _c(
@@ -33049,7 +33068,7 @@ var render = function() {
                         staticClass:
                           "w-1/3 rounded-lg text-center m-10 bg-gray-600"
                       },
-                      [_vm._v("Photo")]
+                      [_vm._v("\n              Photo\n            ")]
                     ),
                     _vm._v(" "),
                     _c("div", { staticClass: "w-2/3 py-10 pl-2 text-sm" }, [
