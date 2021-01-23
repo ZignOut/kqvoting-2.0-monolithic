@@ -23,8 +23,30 @@
 
                         <li>
                             <a :href="route('nominees.home')" class="text-lg text-blue-500 hover:text-blue-400">Back</a>
-                            <inertia-link :href="route('nominees.update', nominee.id)" method="put" :data="nominee" as="button" type="button" class="text-lg text-green-500 hover:text-green-400">Update</inertia-link>
-                            <inertia-link :href="route('nominees.delete', nominee.id)" method="delete" as="button" type="button" class="text-lg text-red-500 hover:text-red-400">Delete</inertia-link>
+
+                            <!-- Update Button -->
+                            <inertia-link 
+                                :href="route('nominees.update', nominee.id)" 
+                                method="put" 
+                                :data="nominee" 
+                                as="button" 
+                                type="button" 
+                                class="text-lg text-green-500 hover:text-green-400"
+                            >
+                                Update
+                            </inertia-link>
+
+                            <!-- Delete Button -->
+                            <inertia-link 
+                                :href="route('nominees.delete', nominee.id)" 
+                                method="delete" 
+                                as="button" 
+                                type="button" 
+                                class="text-lg text-red-500 hover:text-red-400"
+                            >
+                                Delete
+                            </inertia-link>
+                            
                         </li>
                     </ul>
                 </div>

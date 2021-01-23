@@ -4263,6 +4263,28 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: {
@@ -32913,7 +32935,11 @@ var render = function() {
                           type: "button"
                         }
                       },
-                      [_vm._v("Update")]
+                      [
+                        _vm._v(
+                          "\n                            Update\n                        "
+                        )
+                      ]
                     ),
                     _vm._v(" "),
                     _c(
@@ -32927,7 +32953,11 @@ var render = function() {
                           type: "button"
                         }
                       },
-                      [_vm._v("Delete")]
+                      [
+                        _vm._v(
+                          "\n                            Delete\n                        "
+                        )
+                      ]
                     )
                   ],
                   1
