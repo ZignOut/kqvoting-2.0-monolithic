@@ -11,7 +11,7 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Fredoka One', 'cursive', ...defaultTheme.fontFamily.sans],
+                sans: ['Acme', 'sans-serif', 'Fredoka One', 'cursive', ...defaultTheme.fontFamily.sans],
             },
         },
     },
